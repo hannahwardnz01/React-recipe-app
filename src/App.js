@@ -2,6 +2,9 @@ import './App.css';
 import data from "./data"
 import Navbar from "./components/Navbar"
 import Recipe from "./components/Recipe"
+import React from 'react';
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+
 
 export default function App() {
 
@@ -14,20 +17,28 @@ export default function App() {
     )
   }) 
 
-  console.log(recipes)
+  const favs = data.map(item => {
+      return (
+        <Recipe
+            key={item.id}
+            item={item}
+        />
+      )
+  })
 
+  console.log(favs)
+  
   return (
     <div>
-      <nav><h3>My recipes</h3></nav>     
+      <Navbar />
       <h4 className='header--style'>Favorites</h4> 
-      <section className='recipes--favs'>
-        {recipes}
-      </section>
+      <ScrollMenu>
+        {favs}
+      </ScrollMenu>
       <h4 className='header--style'>All recipes</h4> 
-      <section className='recipes--all'>
+      <div className='recipes--all'>
         {recipes}
-        {recipes}
-      </section>
+      </div>
     </div>
   );
 }

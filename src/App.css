@@ -23,14 +23,8 @@ nav {
 
 .recipes--favs{
   display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
-}
-
-.header--style{
-  padding-left: 20px;
-  padding-top: 0px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .recipes--all{
@@ -38,3 +32,18 @@ nav {
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+.header--style{
+  padding-left: 20px;
+  padding-top: 0px;
+}
+
+.star{
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    padding-right: 110px;
+    padding-bottom: 170px;
+}
+
+/**  **/
