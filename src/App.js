@@ -12,7 +12,9 @@ function App() {
         <Header>
           <Nav>
             <GiHotMeal />
-            <Logo to="/"><h3>Recipe finder</h3></Logo>
+            <Logo to="/">
+              <h3>Recipe finder</h3>
+            </Logo>
           </Nav>
           <Search />
         </Header>

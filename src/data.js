@@ -143,5 +143,17 @@ export default [
         imageURL: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/processed-food700-350-e6d0f0f.jpg",
         favorite: false
     },
+    {
+        key: 13,
+        title: "Poutine",
+        description: "Cold potato and bacon salad with creamy dressing",
+        difficulty: "Intermediate",
+        time: "30 minutes",
+        ingredients: ["[potato", "bacon", "summer vege", "mayo"],
+        method: ["cook potatoes till fork tender", "dice all vege", "make dressing"],
+        servings: "4",
+        imageURL: "https://www.bhg.com/thmb/L5QEf1UXOAXXY_uaMzjnlWexk3Y=/1500x0/filters:no_upscale():strip_icc()/quick-poutine-BBOQQT52qRM8_P2JsdQxXI-2336ec1ff4744ee89333a3da76fd7ae3.jpg",
+        favorite: false
+    },
 
 ]
