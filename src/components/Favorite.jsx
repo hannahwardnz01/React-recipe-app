@@ -1,83 +1,98 @@
-import { useEffect, useState } from "react"
-import data from "../data"
+import { useEffect, useState } from "react";
+import data from "../data";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import '@splidejs/splide/dist/css/splide.min.css'
+import "@splidejs/splide/dist/css/splide.min.css";
 
 function Favorite() {
+  const [favorite, setFavorite] = useState([]);
 
-    const [favorite, setFavorite] = useState([]);
+  useEffect(() => {
+    getFavorite();
+  }, []);
 
-    useEffect(() => {
-        getFavorite();
-    }, [])
+  const getFavorite = async () => {
+    const favs = [];
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].favorite === true) {
+        favs.push(data[i]);
+      }
+    }
+    console.log(favs);
+    setFavorite(favs);
+  };
 
-    const getFavorite = async () => {
-        setFavorite(data)
-    };
-    
-    return(
-        <div>
-            <Wrapper>
-                <h3>Favorites</h3>
-                <Splide options={{
-                    perPage: 4,
-                    pagination: false,
-                    drag: "free",
-                    gap: "5rem",
-                }}>
-                {favorite.map((recipe) => {
-                if(recipe.favorite){return(
-                    <SplideSlide>                    
-                        <Card>
-                            <p>{recipe.title}</p>
-                            <img src={recipe.imageURL} alt={recipe.title} />
-                            <Gradient />
-                        </Card>
-                    </SplideSlide>
-                );}
-                
-                })}
-                </Splide>
-            </Wrapper>
-        </div>
-    )
+  return (
+    <div>
+      <Wrapper>
+        <h2>Favorites</h2>
+        {favorite.length === 0 ? (
+          <h4>Add a recpe to favorites to see it here!</h4>
+        ) : (
+          <Splide
+            options={{
+              perPage: 4,
+              pagination: false,
+              drag: "free",
+              gap: "2rem",
+            }}
+          >
+            {favorite.map((recipe) => {
+              return (
+                <SplideSlide>
+                  <Card>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.imageURL} alt={recipe.title} />
+                    <Gradient />
+                  </Card>
+                </SplideSlide>
+              );
+            })}
+          </Splide>
+        )}
+      </Wrapper>
+    </div>
+  );
 }
 
 const Wrapper = styled.div`
-  margin: 0.4rem 1rem;`
+  margin: 0.4rem 1rem;
+`;
 
 const Card = styled.div`
-min-height: 15rem;
-border-radius: 0.5rem;
-overflow: hidden;
-position: relative;
+  min-height: 15rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
 
-    img{
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    p{
-        position: absolute;
-        z-index: 10;
-        left: 50%;
-        bottom: 0%;
-        transform: translate(-50%, 0);
-        color: white;
-        width: 100%;
-        text-align: center;
-        font-weight: 600;
-        font-size: 1rem;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        background-color: transparent;
-    }
+  p {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 0);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  SplideSlide {
+    background-color: transparent;
+  }
 `;
 
 const Gradient = styled.div`

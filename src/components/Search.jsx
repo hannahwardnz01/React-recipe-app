@@ -1,29 +1,12 @@
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 function Search() {
-//   const [input, setInput] = useState("");
-
-//   let navigate = useNavigate();
-
-//   const submitHandler = (e) => {
-//     e.preventDefault();
-//     navigate(`/searched/${input}`);
-
-//     console.log(e);
-//   };
-
   return (
-    <FormStyle //onSubmit={submitHandler}
-    >
+    <FormStyle>
       <div>
-        <FaSearch style={{backgroundColor: "transparent"}}/>
-        <input
-          type="text"
-          //value={input}
-          //onChange={(e) => setInput(e.target.value)}
-        />
+        <FaSearch style={{ backgroundColor: "transparent" }} />
+        <input type="text" />
       </div>
     </FormStyle>
   );
@@ -35,6 +18,8 @@ const FormStyle = styled.form`
   justify-content: right;
   align-items: center;
   margin: 15px;
+  margin-top: 50px
+  padding-top: 0px;
   background-color: transparent;
 
   div {

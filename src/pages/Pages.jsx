@@ -1,11 +1,7 @@
 import Home from "./Home";
 
-function Pages(){
-    return(
-        <div>
-            <Home /> 
-        </div>
-    )
+function Pages() {
+  return <Home />;
 }
 
 export default Pages;
