@@ -1,5 +1,5 @@
 import Pages from "./pages/Pages";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import styled from "styled-components";
 import Search from "./components/Search";
 import { GiHotMeal } from "react-icons/gi";
@@ -11,10 +11,10 @@ function App() {
       <Router>
         <Header>
           <Nav>
-            <GiHotMeal />
-            <Logo to="/">
-              <h3>Recipe finder</h3>
-            </Logo>
+            <GiHotMeal /> 
+              <Logo to="/">
+                <h3>Recipe finder</h3>
+              </Logo>
           </Nav>
           <Search />
         </Header>

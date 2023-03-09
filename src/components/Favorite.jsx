@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import data from "../data";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { BrowserRouter as Link } from "react-router-dom";
 import "@splidejs/splide/dist/css/splide.min.css";
+import Recipe from "../pages/Recipe"
 
 function Favorite() {
   const [favorite, setFavorite] = useState([]);
@@ -40,13 +40,13 @@ function Favorite() {
             {favorite.map((recipe) => {
               return (
                 <SplideSlide>
-                  <Card>
+                    <Card>
                     <Link to={`/recipe/${recipe.id}`}>
-                      <p>{recipe.title}</p>
-                      <img src={recipe.imageURL} alt={recipe.title} />
-                      <Gradient />
-                    </Link>
-                  </Card>
+                        <p>{recipe.title}</p>
+                        <img src={recipe.imageURL} alt={recipe.title} />
+                        <Gradient />
+                      </Link>
+                    </Card>
                 </SplideSlide>
               );
             })}
