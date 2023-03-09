@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import data from "../data";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { BrowserRouter as Link } from "react-router-dom";
 import "@splidejs/splide/dist/css/splide.min.css";
 
 function Favorite() {
@@ -18,7 +19,6 @@ function Favorite() {
         favs.push(data[i]);
       }
     }
-    console.log(favs);
     setFavorite(favs);
   };
 
@@ -41,9 +41,11 @@ function Favorite() {
               return (
                 <SplideSlide>
                   <Card>
-                    <p>{recipe.title}</p>
-                    <img src={recipe.imageURL} alt={recipe.title} />
-                    <Gradient />
+                    <Link to={`/recipe/${recipe.id}`}>
+                      <p>{recipe.title}</p>
+                      <img src={recipe.imageURL} alt={recipe.title} />
+                      <Gradient />
+                    </Link>
                   </Card>
                 </SplideSlide>
               );
