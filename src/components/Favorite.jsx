@@ -3,7 +3,6 @@ import data from "../data";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-import Recipe from "../pages/Recipe"
 
 function Favorite() {
   const [favorite, setFavorite] = useState([]);
@@ -40,13 +39,13 @@ function Favorite() {
             {favorite.map((recipe) => {
               return (
                 <SplideSlide>
+                  <a href={`/recipe/1`}>
                     <Card>
-                    <Link to={`/recipe/${recipe.id}`}>
                         <p>{recipe.title}</p>
                         <img src={recipe.imageURL} alt={recipe.title} />
                         <Gradient />
-                      </Link>
                     </Card>
+                    </a>
                 </SplideSlide>
               );
             })}

@@ -1,19 +1,28 @@
 import { createRoot } from 'react-dom/client';
-import App from './App';
+import React from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import App from "./App"
+import Recipe from "./pages/Recipe"
+
+
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+        path: "recipe/:contactId",
+        element: <Recipe />,
+    },
+  ]);
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
-root.render(<App />);
+root.render(<React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>);
 
-
-// // Before
-// import { render } from 'react-dom';
-// const container = document.getElementById('app');
-// render(<App tab="home" />, container);
-
-// // After
-// import { createRoot } from 'react-dom/client';
-
-//  // createRoot(container!) if you use TypeScript
-// root.render(<App tab="home" />);

@@ -3,7 +3,6 @@ import data from "../data";
 import styled from "styled-components";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
-import { useNavigate } from "react-router-dom";
 
 function All() {
   const [all, setAll] = useState([]);
@@ -16,28 +15,23 @@ function All() {
     setAll(data);
   };
 
-  let navigate = useNavigate(); 
-  const routeChange = () => { 
-    console.log("here")
-  }
-
-  function handleClick(){
-    console.log("here")
-  }
 
   function getGridRecipe(title, imageURL) {
     return (
       <Grid item xs={12} sm={6} md={3}>
+        <a href={`/recipe/1`}>
         <Card>
-        <Link to={`/recipe/${recipe.id}`}>
           <p>{title}</p>
-          <img src={imageURL} onClick={handleClick}/>
+          <img src={imageURL} alt={title}/>
           <Gradient />
-          </Link>
         </Card>
+        </a>
       </Grid>
     );
   }
+
+  
+
 
   return (
     <Box sx={{ flexGrow: 1 }}>

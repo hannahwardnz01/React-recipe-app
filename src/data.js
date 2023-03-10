@@ -1,6 +1,6 @@
 export default [
     {
-        key: 1,
+        id: 1,
         title: "Chicken curry",
         description: "Kale and chicken curry served on rice. Medium spice level.",
         difficulty: "Intermediate",
@@ -12,7 +12,7 @@ export default [
         favorite: false
     },
     {
-        key: 2,
+        id: 2,
         title: "Beef curry",
         description: "Kale and chicken curry served on rice. Medium spice level.",
         difficulty: "Hard",
@@ -24,7 +24,7 @@ export default [
         favorite: false
     },
     {
-        key: 3,
+        id: 3,
         title: "Spag bol",
         description: "Spaggetti bollegnasse",
         difficulty: "Easy",
@@ -36,7 +36,7 @@ export default [
         favorite: true
     },
     {
-        key: 4,
+        id: 4,
         title: "Potato salad",
         description: "Cold potato and bacon salad with creamy dressing",
         difficulty: "Intermediate",
@@ -48,7 +48,7 @@ export default [
         favorite: false
     },
     {
-        key: 5,
+        id: 5,
         title: "Vegemite toast",
         description: "Kale and chicken curry served on rice. Medium spice level.",
         difficulty: "Intermediate",
@@ -60,7 +60,7 @@ export default [
         favorite: true
     },
     {
-        key: 6,
+        id: 6,
         title: "Corn fritter",
         description: "Kale and chicken curry served on rice. Medium spice level.",
         difficulty: "Hard",
@@ -72,7 +72,7 @@ export default [
         favorite: false
     },
     {
-        key: 7,
+        id: 7,
         title: "Dumplings",
         description: "Spaggetti bollegnasse",
         difficulty: "Easy",
@@ -84,7 +84,7 @@ export default [
         favorite: true
     },
     {
-        key: 8,
+        id: 8,
         title: "Burgers",
         description: "Cold potato and bacon salad with creamy dressing",
         difficulty: "Intermediate",
@@ -96,7 +96,7 @@ export default [
         favorite: true
     },
     {
-        key: 9,
+        id: 9,
         title: "Sausages",
         description: "Kale and chicken curry served on rice. Medium spice level.",
         difficulty: "Intermediate",
@@ -108,7 +108,7 @@ export default [
         favorite: false
     },
     {
-        key: 10,
+        id: 10,
         title: "Enchiladas",
         description: "Kale and chicken curry served on rice. Medium spice level.",
         difficulty: "Hard",
@@ -120,7 +120,7 @@ export default [
         favorite: false
     },
     {
-        key: 11,
+        id: 11,
         title: "Tacos",
         description: "Spaggetti bollegnasse",
         difficulty: "Easy",
@@ -132,7 +132,7 @@ export default [
         favorite: true
     },
     {
-        key: 12,
+        id: 12,
         title: "Hot dogs",
         description: "Cold potato and bacon salad with creamy dressing",
         difficulty: "Intermediate",
@@ -144,7 +144,7 @@ export default [
         favorite: false
     },
     {
-        key: 13,
+        id: 13,
         title: "Poutine",
         description: "Cold potato and bacon salad with creamy dressing",
         difficulty: "Intermediate",
