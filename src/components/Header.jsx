@@ -8,7 +8,7 @@ function Header () {
         <Wrapper>
           <Nav>
             <GiHotMeal /> 
-            <a href={`/`}><h3>Recipe finder</h3></a>
+              <a href={`/`}><b>Recipe finder</b></a>
           </Nav>
           <Search />
         </Wrapper>
@@ -24,6 +24,18 @@ const Nav = styled.div`
     color: var(--gray-600);
     font-size: 2rem;
   }
+  a {
+    text-decoration: none;
+    colour: black;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 35px;
+    bold: true;
+    }
+  a:visited, a:hover, a:focus {
+    text-decoration: none;
+    color: #000;
+}
 `;
 
 const Wrapper = styled.div`
@@ -31,4 +43,5 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `
+
 export default Header

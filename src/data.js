@@ -25,7 +25,7 @@ export default [
     },
     {
         id: 3,
-        title: "Spag bol",
+        title: "Spaghetti bolognese",
         description: "Spaggetti bollegnasse",
         difficulty: "Easy",
         time: "30 minutes",
