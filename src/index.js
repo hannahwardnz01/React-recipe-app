@@ -4,18 +4,21 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import App from "./App"
-import Recipe from "./pages/Recipe"
+import Home from "./routes/Home"
+import Recipe from "./routes/Recipe"
+import ErrorPage from './error-page';
 
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <App />,
+      element: <Home />,
+      errorElement: <ErrorPage />,
+
     },
     {
-        path: "recipe/:contactId",
-        element: <Recipe />,
+        path: "recipe/:id",
+        element: <Recipe/>,
     },
   ]);
 
@@ -25,4 +28,3 @@ const root = createRoot(container);
 root.render(<React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>);
-

@@ -8,6 +8,9 @@ npm install @splidejs/splide-extension-grid
 npm install @mui/material @emotion/react @emotion/styled
 npm install react-router-link
 npm install react react-dom next
+npm install localforage
+npm install sort-by
+npm install matchSorter
 
 # Refernces:
 ## for learning how to route

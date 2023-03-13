@@ -3,6 +3,7 @@ import data from "../data";
 import styled from "styled-components";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
+import { Link } from "react-router-dom";
 
 function All() {
   const [all, setAll] = useState([]);
@@ -16,16 +17,16 @@ function All() {
   };
 
 
-  function getGridRecipe(title, imageURL) {
+  function getGridRecipe(recipe) {
     return (
       <Grid item xs={12} sm={6} md={3}>
-        <a href={`/recipe/1`}>
+        <Link to={`recipe/${recipe.id}`}>
         <Card>
-          <p>{title}</p>
-          <img src={imageURL} alt={title}/>
+          <p>{recipe.title}</p>
+          <img src={recipe.imageURL} alt={recipe.title}/>
           <Gradient />
         </Card>
-        </a>
+        </Link>
       </Grid>
     );
   }
@@ -39,7 +40,7 @@ function All() {
         <h2>All recipes</h2>
         <Grid container spacing={{ xs: 2, md: 4 }}>
           {all.map((recipe) => {
-            return getGridRecipe(recipe.title, recipe.imageURL);
+            return getGridRecipe(recipe);
           })}
         </Grid>
       </Wrapper>
