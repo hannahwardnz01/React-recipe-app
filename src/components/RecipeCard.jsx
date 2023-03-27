@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
-import data from "../data";
 import InfoIcon from "./InfoIcon";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 
 function RecipeCard(recipeGiven){
 
@@ -9,15 +8,37 @@ function RecipeCard(recipeGiven){
 
     const recipe = recipeGiven.id.recipe
 
+    function getRating(){
+        if(recipe.rating === "1"){
+            return <Rating> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
+        }
+        else if(recipe.rating === "2"){
+            return <Rating> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
+        }
+        else if(recipe.rating === "3"){
+            return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
+        }
+        else if(recipe.rating === "4"){
+            return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> </Rating>
+        }
+        else if(recipe.rating === "5"){
+            return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> </Rating>
+        }
+
+    }
+
     return(
         <Card>
             <Wrapper>
+                <TitleWrapper>
                     <h1>{recipe.title}</h1>
-                    <InfoWrapper>
-                        <InfoIcon iconInfo={recipe.time} iconType="Time"/>
-                        <InfoIcon iconInfo={recipe.difficulty} iconType="Difficuly"/>
-                        <InfoIcon iconInfo={recipe.servings} iconType="Servings"/>
-                    </InfoWrapper>
+                    {getRating()}
+                </TitleWrapper> 
+                <InfoWrapper>
+                    <InfoIcon iconInfo={recipe.time} iconType="Time"/>
+                    <InfoIcon iconInfo={recipe.difficulty} iconType="Difficuly"/>
+                    <InfoIcon iconInfo={recipe.servings} iconType="Servings"/>
+                </InfoWrapper>
             </Wrapper>
             <CardWrapper>
                 <Image>
@@ -88,6 +109,16 @@ const InfoWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+`
+
+const TitleWrapper = styled.div`
+    display: flex;
+`
+
+const Rating = styled.div`
+  padding-left: 20px;
+  padding-top: 18px;
+  font-size: 20px;
 `
 
 export default RecipeCard;

@@ -9,7 +9,8 @@ export default [
         method: ["marrinade chicken", "fry onion", "add tomatos"],
         servings: "4",
         imageURL: "https://www.foodandwine.com/thmb/8YAIANQTZnGpVWj2XgY0dYH1V4I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spicy-chicken-curry-FT-RECIPE0321-58f84fdf7b484e7f86894203eb7834e7.jpg",
-        favorite: false
+        favorite: false,
+        rating: "5", 
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ export default [
         method: ["make sauce", "make rice", "simmer for 30 mins"],
         servings: "4",
         imageURL: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/beef-curry-711a4c1.jpg?quality=90&resize=440,400",
-        favorite: false
+        favorite: false,
+        rating: "5",
     },
     {
         id: 3,
@@ -33,7 +35,8 @@ export default [
         method: ["make pasta", "fry everything", "serve"],
         servings: "4",
         imageURL: "https://img.taste.com.au/5qlr1PkR/taste/2016/11/spaghetti-bolognese-106560-1.jpeg",
-        favorite: true
+        favorite: true,
+        rating: "4",
     },
     {
         id: 4,
@@ -45,7 +48,8 @@ export default [
         method: ["cook potatoes till fork tender", "dice all vege", "make dressing"],
         servings: "4",
         imageURL: "https://twokooksinthekitchen.com/wp-content/uploads/2022/04/herbed-potato-salad-2.jpg",
-        favorite: false
+        favorite: false,
+        rating: "3",
     },
     {
         id: 5,
@@ -57,7 +61,8 @@ export default [
         method: ["marrinade chicken", "fry onion", "add tomatos"],
         servings: "4",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/1/10/Vegemiteontoast_large.jpg",
-        favorite: true
+        favorite: true,
+        rating: "5",
     },
     {
         id: 6,
@@ -69,7 +74,8 @@ export default [
         method: ["make sauce", "make rice", "simmer for 30 mins"],
         servings: "4",
         imageURL: "https://cookingwithayeh.com/wp-content/uploads/2021/02/Zucchini-Corn-Fritters-0.jpg",
-        favorite: false
+        favorite: false,
+        rating: "4",
     },
     {
         id: 7,
@@ -81,7 +87,8 @@ export default [
         method: ["make pasta", "fry everything", "serve"],
         servings: "4",
         imageURL: "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2Farchive%2F8f8b6fc612a03855c59f0cca1fffad07ce6858ca",
-        favorite: true
+        favorite: true,
+        rating: "2",
     },
     {
         id: 8,
@@ -93,7 +100,8 @@ export default [
         method: ["cook potatoes till fork tender", "dice all vege", "make dressing"],
         servings: "4",
         imageURL: "https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Cheeseburger-3d7c922.jpg",
-        favorite: true
+        favorite: true,
+        rating: "3",
     },
     {
         id: 9,
@@ -105,7 +113,8 @@ export default [
         method: ["marrinade chicken", "fry onion", "add tomatos"],
         servings: "4",
         imageURL: "https://cdn.shopify.com/s/files/1/0277/2818/3436/products/446477620_1000x.jpg?v=1584845895",
-        favorite: false
+        favorite: false,
+        rating: "1",
     },
     {
         id: 10,
@@ -117,7 +126,8 @@ export default [
         method: ["make sauce", "make rice", "simmer for 30 mins"],
         servings: "4",
         imageURL: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/10/1/0/WU0308H_simple-perfect-enchiladas_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382541970364.jpeg",
-        favorite: false
+        favorite: false,
+        rating: "2",
     },
     {
         id: 11,
@@ -129,7 +139,8 @@ export default [
         method: ["make pasta", "fry everything", "serve"],
         servings: "4",
         imageURL: "https://img.taste.com.au/R_dRdL7V/taste/2022/09/healthy-tacos-recipe-181113-1.jpg",
-        favorite: true
+        favorite: true,
+        rating: "3",
     },
     {
         id: 12,
@@ -141,7 +152,8 @@ export default [
         method: ["cook potatoes till fork tender", "dice all vege", "make dressing"],
         servings: "4",
         imageURL: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/processed-food700-350-e6d0f0f.jpg",
-        favorite: false
+        favorite: false,
+        rating: "4",
     },
     {
         id: 13,
@@ -153,7 +165,8 @@ export default [
         method: ["cook potatoes till fork tender", "dice all vege", "make dressing"],
         servings: "4",
         imageURL: "https://www.bhg.com/thmb/L5QEf1UXOAXXY_uaMzjnlWexk3Y=/1500x0/filters:no_upscale():strip_icc()/quick-poutine-BBOQQT52qRM8_P2JsdQxXI-2336ec1ff4744ee89333a3da76fd7ae3.jpg",
-        favorite: false
+        favorite: false,
+        rating: "1",
     },
 
 ]

@@ -8,7 +8,7 @@ function Search() {
   return (
     <Icons className="here">
       <Link to={`add`}>
-        <BsFillPlusSquareFill style={{ paddingRight: "10px", paddingTop: "17px" }} />
+        <BsFillPlusSquareFill style={{ paddingTop: "16px" }} />
       </Link>
       <FormStyle>
         <div>
