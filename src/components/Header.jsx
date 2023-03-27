@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import Search from "./Search";
 import { GiHotMeal } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 function Header () {
     return(
-        <div className="App">
+        <div>
         <Wrapper>
           <Nav>
             <GiHotMeal /> 
-              <a href={`/`}><b>Recipe finder</b></a>
+              <Link to={`/`}><b>Recipe finder</b></Link>
           </Nav>
-          <Search />
         </Wrapper>
     </div>
     )
@@ -39,9 +39,10 @@ const Nav = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 0rem 0rem 0rem 1rem;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
 `
+
 
 export default Header

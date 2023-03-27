@@ -23,8 +23,8 @@
     "react-horizontal-scrolling-menu": "^3.2.3",
     "react-icons": "^4.8.0",
     "react-router-link": "^2.0.2",
-    "react-scripts": "5.0.1",
-    "sort-by": "^1.2.0",
+    "react-scripts": "^5.0.1",
+    "sort-by": "^0.0.2",
     "sqlite3": "^5.1.4",
     "styled-components": "^5.3.8",
     "web-vitals": "^2.1.4"

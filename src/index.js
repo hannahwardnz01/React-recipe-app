@@ -5,20 +5,27 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from "./routes/Home"
-import Recipe from "./routes/Recipe"
+import Recipe, {
+  loader as recipeLoader,
+}  from "./routes/Recipe"
 import ErrorPage from './error-page';
+import Edit from "./routes/Edit"
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Home />,
-      errorElement: <ErrorPage />,
-
+      errorElement: <ErrorPage />
     },
     {
-        path: "recipe/:id",
-        element: <Recipe/>,
+      path: "recipe/:id",
+      element: <Recipe/>,
+      loader: recipeLoader,
+    },
+    {
+      path: "/add",
+      element: <Edit/>,
     },
   ]);
 

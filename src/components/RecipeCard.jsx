@@ -3,24 +3,11 @@ import styled from "styled-components";
 import data from "../data";
 import InfoIcon from "./InfoIcon";
 
-function RecipeCard({id}){
+function RecipeCard(recipeGiven){
 
-    const [recipe, setRecipe] = useState({});
+    console.log(recipeGiven.id.recipe.title)
 
-    useEffect(() => {
-        getRecipe();
-      }, []);
-
-    const getRecipe = async => {
-        for (let i = 0; i < data.length; i++) {
-            if (data[i].id === id) {
-                console.log(id)
-                console.log(data[i].id)
-                setRecipe(data[i]);
-                break;
-            }
-        }
-    }
+    const recipe = recipeGiven.id.recipe
 
     return(
         <Card>
@@ -39,17 +26,17 @@ function RecipeCard({id}){
                 <InfoPanel>
                     <h2>Ingredients</h2>
                     <ul>
-                        {/* {recipe.ingredients.map((item) => {
+                        {recipe.ingredients.map((item) => {
                             return <li>{item}</li>
-                        })} */}
+                        })}
                     </ul>
                 </InfoPanel>
                 <InfoPanel>
                     <h2>Method</h2>
                     <ol>
-                        {/* {recipe.method.map((item) => {
+                        {recipe.method.map((item) => {
                             return <li>{item}</li>
-                        })} */}
+                        })}
                     </ol>
                 </InfoPanel>
             </CardWrapper>
@@ -59,7 +46,9 @@ function RecipeCard({id}){
 
 const Card = styled.div`
     display: flex;
-    flex-direction: column;`
+    flex-direction: column;
+    padding-top: 20px;
+    `
 
 const CardWrapper = styled.div`
     display: flex;

@@ -1,14 +1,22 @@
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
+import { BsFillPlusSquareFill } from "react-icons/bs"
+import { Link } from "react-router-dom";
+
 
 function Search() {
   return (
-    <FormStyle>
-      <div>
-        <FaSearch style={{ backgroundColor: "transparent" }} />
-        <input type="text" />
-      </div>
-    </FormStyle>
+    <Icons className="here">
+      <Link to={`add`}>
+        <BsFillPlusSquareFill style={{ paddingRight: "10px", paddingTop: "17px" }} />
+      </Link>
+      <FormStyle>
+        <div>
+          <FaSearch style={{ backgroundColor: "transparent", fontSize: "20px" }} />
+          <input type="text" />
+        </div>
+      </FormStyle>
+    </Icons>
   );
 }
 
@@ -52,6 +60,18 @@ const FormStyle = styled.form`
     transform: translate(100%, -50%);
     color: white;
   }
+`
+
+const Icons = styled.div`
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  color: #494949;
+  font-size: 60px;
+  a:visited { 
+    text-decoration: none; 
+    color: #494949; 
+   }
 `;
 
 export default Search;
