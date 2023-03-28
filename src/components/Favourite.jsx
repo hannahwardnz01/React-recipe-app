@@ -5,29 +5,29 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Link } from "react-router-dom";
 
-function Favorite() {
-  const [favorite, setFavorite] = useState([]);
+function Favourite() {
+  const [favourite, setFavourite] = useState([]);
 
   useEffect(() => {
-    getFavorite();
+    getFavourite();
   }, []);
 
-  const getFavorite = async () => {
+  const getFavourite = async () => {
     const favs = [];
     for (let i = 0; i < data.length; i++) {
-      if (data[i].favorite === true) {
+      if (data[i].favourite === true) {
         favs.push(data[i]);
       }
     }
-    setFavorite(favs);
+    setFavourite(favs);
   };
 
   return (
     <div>
       <Wrapper>
-        <h2>Favorites</h2>
-        {favorite.length === 0 ? (
-          <h4>Add a recpe to favorites to see it here!</h4>
+        <h2>Favourites</h2>
+        {favourite.length === 0 ? (
+          <h4>Add a recpe to favourites to see it here!</h4>
         ) : (
           <Splide
             options={{
@@ -37,7 +37,7 @@ function Favorite() {
               gap: "2rem",
             }}
           >
-            {favorite.map((recipe) => {
+            {favourite.map((recipe) => {
               return (
                 <SplideSlide>
                   <Link to={`recipe/${recipe.id}`}>
@@ -104,4 +104,4 @@ const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
-export default Favorite;
+export default Favourite;

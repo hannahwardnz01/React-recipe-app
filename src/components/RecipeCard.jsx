@@ -4,8 +4,6 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 
 function RecipeCard(recipeGiven){
 
-    console.log(recipeGiven.id.recipe.title)
-
     const recipe = recipeGiven.id.recipe
 
     function getRating(){

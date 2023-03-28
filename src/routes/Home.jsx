@@ -1,4 +1,4 @@
-import Favorite from "../components/Favorite";
+import Favourite from "../components/Favourite";
 import All from "../components/All";
 import Header from "../components/Header"
 import styled from "styled-components";
@@ -11,7 +11,7 @@ function Home() {
         <Header />
         <Search />
       </HeaderWrapper>
-      <Favorite />
+      <Favourite />
       <All />
     </div>
   );

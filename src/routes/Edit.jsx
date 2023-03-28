@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import styled from "styled-components";
 import { Form, useNavigate } from "react-router-dom";
+import RecipeForm from "../components/RecipeForm";
 
 
 function Edit() {
@@ -10,67 +11,7 @@ function Edit() {
       <HeaderWrapper>
         <Header />
       </HeaderWrapper>
-      <FormWrapper>
-      <Form method="post" id="contact-form">
-        <input
-          placeholder="Title"
-          type="text"
-          defaultValue=""
-        />
-        <textarea
-          placeholder="Description"
-          defaultValue=""
-          rows={6}
-        />
-        <label for="difficulty">Select a difficulty</label>
-        <select id="difficulty">
-          <option value="1">Easy</option>
-          <option value="2">Intermediate</option>
-          <option value="3">Hard</option>
-        </select>
-        <input
-          type="number"
-          placeholder="Time taken (hours)"
-          defaultValue=""
-        />
-        <input
-          type="number"
-          placeholder="Servings"
-          defaultValue=""
-        />
-        <input
-          type="number"
-          placeholder="Rating (1-5)"
-          defaultValue=""
-        />
-        <input
-          placeholder="Image URL"
-          type="text"
-          defaultValue=""
-        />
-        <textarea
-          placeholder="Ingredients"
-          defaultValue=""
-          rows={6}
-        />
-        <textarea
-          placeholder="Method"
-          defaultValue=""
-          rows={6}
-        />
-        <label for="accept">
-          <input type="checkbox" id="accept" name="accept" value="yes"/>Favorite?
-        </label>
-        <p>
-        <button type="submit" onClick={() => {
-            navigate(-1);
-          }}>Save</button>
-        <button type="button" onClick={() => {
-            navigate(-1);
-          }}>Cancel</button>
-      </p>
-    </Form>
-    </FormWrapper>
+      <RecipeForm />
     </div>
   )
 }
@@ -82,8 +23,35 @@ const HeaderWrapper = styled.div`
   padding-bottom: 20px;
 `
 
+const BodyWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  h1 {
+    width: 100%
+  }
+`
+
 const FormWrapper = styled.div`
   display: flex;
-  flex-direction: column;`
+  width: 100%;
+  flex-direction: column;
+	position: relative;
+	padding-top: 1.5rem;
+	input {
+    width:100%;
+    border-radius: 1rem;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  textarea {}
+`
+const DemoWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+`
 
 export default Edit;

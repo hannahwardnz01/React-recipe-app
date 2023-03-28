@@ -4,8 +4,6 @@ import { useLoaderData } from "react-router-dom";
 import getRecipe from "../recipe";
 import styled from "styled-components";
 
-
-
 export async function loader({ params }) {
   const recipe = await getRecipe(params.id);
   return { recipe };
