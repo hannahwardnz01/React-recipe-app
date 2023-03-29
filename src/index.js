@@ -10,6 +10,7 @@ import Recipe, {
 }  from "./routes/Recipe"
 import ErrorPage from './error-page';
 import Edit from "./routes/Edit"
+import './index.css'
 
 
 const router = createBrowserRouter([

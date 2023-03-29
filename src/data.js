@@ -28,7 +28,7 @@ export default [
     {
         id: 3,
         title: "Spaghetti bolognese",
-        description: "Spaggetti bollegnasse",
+        description: "Spaggetti bollegnasse mmmm yummy!!! So warm to eat but only yum with cheese :P Mince is on speical at new world this week hananh buy some and feeeze it. Spaggetti bollegnasse mmmm yummy!!! So warm to eat but only yum with cheese :P Mince is on speical at new world this week hananh buy some and feeeze it.",
         difficulty: "Easy",
         time: "30 minutes",
         ingredients: ["tomato", "carrot", "mince"],

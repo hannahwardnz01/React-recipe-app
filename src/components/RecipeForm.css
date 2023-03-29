@@ -4,7 +4,6 @@
     align-items: left;
     padding: 2rem;
     background-color: #f8f8f8;
-    border-radius: 1rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -26,17 +25,20 @@
   input {
     font-size: 1.5rem;
     padding: 10px;
+    border-radius: .5rem;
   }
 
   textarea {
     font-size: 1.5rem;
     padding: 10px;
-    font-family: "Consolas", sans-serif
+    font-family: "Consolas", sans-serif;
+    border-radius: .5rem;
   }
 
   select {
     font-size: 1.5rem;
     padding: 10px;
+    border-radius: .5rem;
   }
   
   /* input[type='text'],

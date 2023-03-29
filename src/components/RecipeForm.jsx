@@ -37,7 +37,7 @@ function RecipeForm() {
           <input type="text" name="description" placeholder="Description" value={formData.description} onChange={handleChange} />
         </label>
         <select id="options" value={formData.difficulty} onChange={handleChange}>
-          <option value="">Choose a difficulty</option>
+          <option value="">Choose an difficulty</option>
           <option value="option1">Easy</option>
           <option value="option2">Medium</option>
           <option value="option3">Hard</option>

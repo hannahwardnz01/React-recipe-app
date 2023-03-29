@@ -27,17 +27,20 @@ function RecipeCard(recipeGiven){
 
     return(
         <Card>
-            <Wrapper>
-                <TitleWrapper>
-                    <h1>{recipe.title}</h1>
-                    {getRating()}
-                </TitleWrapper> 
-                <InfoWrapper>
-                    <InfoIcon iconInfo={recipe.time} iconType="Time"/>
-                    <InfoIcon iconInfo={recipe.difficulty} iconType="Difficuly"/>
-                    <InfoIcon iconInfo={recipe.servings} iconType="Servings"/>
-                </InfoWrapper>
-            </Wrapper>
+            <HeaderWrapper>
+                <p>{recipe.description}</p>
+                <Wrapper>
+                    <TitleWrapper>
+                        <h1>{recipe.title}</h1>
+                        {getRating()}
+                    </TitleWrapper> 
+                    <InfoWrapper>
+                        <InfoIcon iconInfo={recipe.time} iconType="Time"/>
+                        <InfoIcon iconInfo={recipe.difficulty} iconType="Difficuly"/>
+                        <InfoIcon iconInfo={recipe.servings} iconType="Servings"/>
+                    </InfoWrapper>
+                </Wrapper>
+            </HeaderWrapper>
             <CardWrapper>
                 <Image>
                     <img src={recipe.imageURL} alt={recipe.title} />
@@ -101,6 +104,8 @@ const Wrapper = styled.div`
     justify-content: space-between;
     line-height: 10px;
     margin: 15px;
+    width: 40%;
+    mid-width: 1000px;
 `
 
 const InfoWrapper = styled.div`
@@ -117,6 +122,20 @@ const Rating = styled.div`
   padding-left: 20px;
   padding-top: 18px;
   font-size: 20px;
+`
+
+const HeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: left;
+  justify-content: left;
+  p {
+    flex-shrink: 1
+    position: relative;
+    padding-top: 18px;
+    font-size: 16px;
+    width: 60%
+    }
 `
 
 export default RecipeCard;
