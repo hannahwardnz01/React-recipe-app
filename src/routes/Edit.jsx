@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import HeaderLeft from "../components/HeaderLeft";
 import styled from "styled-components";
 import { Form, useNavigate } from "react-router-dom";
 import RecipeForm from "../components/RecipeForm";
@@ -9,7 +9,7 @@ function Edit() {
   return (
     <div>
       <HeaderWrapper>
-        <Header />
+        <HeaderLeft />
       </HeaderWrapper>
       <RecipeForm />
     </div>

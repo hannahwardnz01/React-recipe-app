@@ -12,6 +12,7 @@ npm install localforage
 npm install sort-by
 npm install matchSorter
 npm install formik --save
+npm install @mui/material @emotion/react @emotion/styled
 
 # Refernces:
 ## for learning how to route

@@ -1,5 +1,5 @@
 import RecipeCard from "../components/RecipeCard"
-import Header from "../components/Header"
+import HeaderLeft from "../components/HeaderLeft"
 import { useLoaderData } from "react-router-dom";
 import getRecipe from "../recipe";
 import styled from "styled-components";
@@ -14,7 +14,7 @@ function Recipe() {
   return (
     <div>
       <HeaderWrapper>
-        <Header />
+        <HeaderLeft />
       </HeaderWrapper>
       <RecipeCard id={{recipe}} />
     </div>

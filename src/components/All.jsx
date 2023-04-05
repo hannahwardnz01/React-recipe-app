@@ -37,7 +37,7 @@ function All() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Wrapper>
-        <h2>All recipes</h2>
+        <h1>All recipes</h1>
         <Grid container spacing={{ xs: 2, md: 4 }}>
           {all.map((recipe) => {
             return getGridRecipe(recipe);
@@ -72,13 +72,13 @@ const Card = styled.div`
     position: absolute;
     z-index: 10;
     left: 50%;
-    bottom: 0%;
+    padding-top: 100px;
     transform: translate(-50%, 0);
     color: white;
     width: 100%;
     text-align: center;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 2rem;
     height: 40%;
     display: flex;
     justify-content: center;
@@ -92,6 +92,6 @@ const Gradient = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 `;
 export default All;
