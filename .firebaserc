@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "react-recipe-app-d43aa",
+    "staging": "react-recipe-app-d43aa"
+  },
+  "targets": {},
+  "etags": {}
+}

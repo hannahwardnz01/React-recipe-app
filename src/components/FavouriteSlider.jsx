@@ -25,7 +25,7 @@ function Favourite() {
   return (
     <div>
       <Wrapper>
-        <h1>Favourites</h1>
+        <h1 style={{fontWeight: "lighter"}}>Favourites</h1>
         {favourite.length === 0 ? (
           <h4>Add a recpe to favourites to see it here!</h4>
         ) : (
@@ -43,7 +43,7 @@ function Favourite() {
                   <Link to={`recipe/${recipe.id}`}>
                     <Card>
                         <p>{recipe.title}</p>
-                        <img src={recipe.imageURL} alt={recipe.title} />
+                        <img src={recipe.imageURL} alt={recipe.title} style={{boxShadow: "0 8px 8px -8px grey"}}/>
                         <Gradient />
                     </Card>
                     </Link>
@@ -66,7 +66,6 @@ const Card = styled.div`
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
-
   img {
     position: absolute;
     left: 0;
@@ -79,13 +78,12 @@ const Card = styled.div`
     position: absolute;
     z-index: 10;
     left: 50%;
-    padding-top: 100px;
+    padding-top: 120px;
     transform: translate(-50%, 0);
     color: white;
     width: 100%;
     text-align: center;
-    font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     height: 40%;
     display: flex;
     justify-content: center;

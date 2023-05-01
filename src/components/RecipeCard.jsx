@@ -1,141 +1,124 @@
 import styled from "styled-components";
-import InfoIcon from "./InfoIcon";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai"
+import { COLORS } from "../Colors"
+
+export function getRating(recipe){
+    if(recipe.rating === "1"){
+        return <Rating> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
+    }
+    else if(recipe.rating === "2"){
+        return <Rating> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
+    }
+    else if(recipe.rating === "3"){
+        return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
+    }
+    else if(recipe.rating === "4"){
+        return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> </Rating>
+    }
+    else if(recipe.rating === "5"){
+        return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> </Rating>
+    }
+
+}
 
 function RecipeCard(recipeGiven){
 
     const recipe = recipeGiven.id.recipe
 
-    function getRating(){
-        if(recipe.rating === "1"){
-            return <Rating> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
-        }
-        else if(recipe.rating === "2"){
-            return <Rating> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
-        }
-        else if(recipe.rating === "3"){
-            return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> <AiOutlineStar/></Rating>
-        }
-        else if(recipe.rating === "4"){
-            return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiOutlineStar/> </Rating>
-        }
-        else if(recipe.rating === "5"){
-            return <Rating> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> <AiFillStar/> </Rating>
-        }
-
-    }
-
     return(
-        <Card>
-            <HeaderWrapper>
-                <p>{recipe.description}</p>
-                <Wrapper>
-                    <TitleWrapper>
-                        <h1>{recipe.title}</h1>
-                        {getRating()}
-                    </TitleWrapper> 
-                    <InfoWrapper>
-                        <InfoIcon iconInfo={recipe.time} iconType="Time"/>
-                        <InfoIcon iconInfo={recipe.difficulty} iconType="Difficuly"/>
-                        <InfoIcon iconInfo={recipe.servings} iconType="Servings"/>
-                    </InfoWrapper>
-                </Wrapper>
-            </HeaderWrapper>
-            <CardWrapper>
-                <Image>
-                    <img src={recipe.imageURL} alt={recipe.title} />
-                </Image>
-                <InfoPanel>
-                    <h2>Ingredients</h2>
-                    <ul>
-                        {recipe.ingredients.map((item) => {
-                            return <li>{item}</li>
-                        })}
-                    </ul>
-                </InfoPanel>
-                <InfoPanel>
-                    <h2>Method</h2>
-                    <ol>
-                        {recipe.method.map((item) => {
-                            return <li>{item}</li>
-                        })}
-                    </ol>
-                </InfoPanel>
-            </CardWrapper>
+        <Card className="recipeCard">
+            <img src={recipe.imageURL} alt={recipe.title} />
+            <TitleWrapper>
+                <h1>{recipe.title}</h1>
+                <Rating>
+                    {getRating(recipe)}
+                </Rating>
+            </TitleWrapper>
+            <DetailsWrapper>
+                <p>Cook time: {recipe.time}</p>
+                <p>Difficulty: {recipe.difficulty}</p>
+                <p>Servings: {recipe.servings}</p>
+            </DetailsWrapper>
+            <p style={{fontSize: "18px"}}>{recipe.description}</p>
+            <IngredientsWrapper>
+            <h2>Ingredients</h2>
+                <ul>
+                    {recipe.ingredients.map((item) => {
+                        return <li>{item}</li>
+                    })}
+                </ul>
+            </IngredientsWrapper>
+            <h2 style={{marginBottom: 0}}>Method</h2>
+            <ol style={{lineHeight: "2"}}>
+                {recipe.method.map((item) => {
+                    return <li>{item}</li>
+                })}
+            </ol>
         </Card>
-    ) 
+    )
 }
 
 const Card = styled.div`
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    font-family: 'Roboto Slab', serif;
+    width: 600px;
+    font-size: 20px;
+    h1 {
+        line-height: .5;
+    }
+    p {
+        padding-top: 0px;
+    }
+    img {
+        border-radius: 0.4rem;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
     `
-
-const CardWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 30px;
-`
-
-const InfoPanel = styled.div`
+const IngredientsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 30%;
-    padding: 20px;
-`
-const Image = styled.div`
+    background: ${COLORS.UraniunBlue};
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ul {
+        columns: 3;
+    }
+    li{
+        margin-right:20px;
+        list-style-type: square;
+    }
+    h2 {
+        line-height: 0.5;
+        padding-left: 20px;
+        margin-bottom: 0;
 
-  img {
-    border-radius: 0.5rem;
-    position: relative;
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    margin: 20px;
-  }
-`
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    line-height: 10px;
-    margin: 15px;
-    width: 40%;
-    mid-width: 1000px;
-`
-
-const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-`
-
-const TitleWrapper = styled.div`
-    display: flex;
+    }
 `
 
 const Rating = styled.div`
   padding-left: 20px;
-  padding-top: 18px;
+  padding-top: 13px;
   font-size: 20px;
 `
 
-const HeaderWrapper = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: left;
-  justify-content: left;
-  p {
-    flex-shrink: 1
-    position: relative;
-    padding-top: 18px;
-    font-size: 16px;
-    width: 60%
-    }
+const DetailsWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.2;
+    padding-right: 60px;
+
+`
+
+const TitleWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    allign-items: center;
 `
 
 export default RecipeCard;

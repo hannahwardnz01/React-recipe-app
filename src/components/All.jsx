@@ -37,7 +37,7 @@ function All() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Wrapper>
-        <h1>All recipes</h1>
+        <h1 style={{fontWeight: "lighter"}}>All recipes</h1>
         <Grid container spacing={{ xs: 2, md: 4 }}>
           {all.map((recipe) => {
             return getGridRecipe(recipe);
@@ -60,7 +60,6 @@ const Card = styled.div`
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
-
   img {
     position: absolute;
     width: 100%;
@@ -72,13 +71,12 @@ const Card = styled.div`
     position: absolute;
     z-index: 10;
     left: 50%;
-    padding-top: 100px;
+    padding-top: 120px;
     transform: translate(-50%, 0);
     color: white;
     width: 100%;
     text-align: center;
-    font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     height: 40%;
     display: flex;
     justify-content: center;

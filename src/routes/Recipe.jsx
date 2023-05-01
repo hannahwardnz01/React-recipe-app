@@ -1,8 +1,10 @@
 import RecipeCard from "../components/RecipeCard"
+import ExploreCard from "../components/ExploreCard"
 import HeaderLeft from "../components/HeaderLeft"
 import { useLoaderData } from "react-router-dom";
 import getRecipe from "../recipe";
 import styled from "styled-components";
+import Footer from "../components/Footer"
 
 export async function loader({ params }) {
   const recipe = await getRecipe(params.id);
@@ -13,18 +15,23 @@ function Recipe() {
   const { recipe } = useLoaderData();
   return (
     <div>
-      <HeaderWrapper>
+      <div style={{boxShadow: "0 8px 8px -8px grey"}}>
         <HeaderLeft />
-      </HeaderWrapper>
-      <RecipeCard id={{recipe}} />
+      </div>
+      <Wrapper>
+        <RecipeCard id={{recipe}} />
+        <ExploreCard />
+      </Wrapper>
+      <Footer />
     </div>
   )
 }
 
-const HeaderWrapper = styled.div`
-  padding: 0rem 0rem 0rem 1rem;
+const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
 `
+
 
 export default Recipe;
